@@ -1,0 +1,611 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+.all-content
+{
+    background-color: beige;
+    overflow: hidden;
+}
+html ::-webkit-scrollbar-track
+{
+    background: transparent;
+}
+html ::-webkit-scrollbar-thumb
+{
+    background: rgb(211, 138, 66);
+    border-radius: 10px;
+}
+html ::-webkit-scrollbar
+{
+    width: 10px;
+}
+#navbar
+{
+    background-color: rgb(241, 125, 43);
+}
+#logo img
+{
+    border-radius: 10px;
+    width: 80px;
+    height: 40px;
+    margin-left: 40px;
+}
+.navbar-nav
+{
+    margin-left: 50px;
+}
+.nav-item .nav-link
+{
+    color: black;
+    margin-left: 10px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.nav-item .nav-link:hover
+{
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+}
+#navbar form button
+{
+    background: black;
+    color: white;
+    border: 1px solid white;
+}
+.home
+{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(bg-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+    height: 80vh;
+    width: 100%;
+}
+.home-h1
+{
+    font-size: 50px;
+    padding: 13% 5% 0;
+    color: whitesmoke;
+    max-width: 700px;
+    word-spacing: 5px;
+}
+.home-p1
+{
+    padding: 0 5%;
+    margin-top: 2%;
+    color: whitesmoke;
+    max-width: 670px;
+    word-spacing: 2px;
+}
+.home-btn1
+{
+    margin-left: 5%;
+    margin-top: 1%;
+    padding: 3px 20px;
+    border-color: rgb(241, 125, 43);
+    font-weight: bold;
+    transition: ease-in 0.3s;
+}
+.home-btn1:hover
+{
+    background-color: rgb(241, 125, 43);
+    transition: ease-in 0.3s;
+}
+#about
+{
+    background-color: beige;
+    width: 100%;
+    height: 100vh;
+}
+#about .container
+{
+    padding-top: 70px;
+}
+.about-heading
+{
+    text-align: center;
+    margin-bottom: 50px;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+#about h3
+{
+    font-size: 30px;
+    font-weight: bold;
+}
+#about p
+{
+    font-size: 12px;
+}
+.about-heading span
+{
+    color: rgb(241, 125, 43);
+}
+#about .card
+{
+    border-radius: 10px;
+}
+#about .card img
+{
+    border-radius: 10px;
+}
+.about-btn
+{
+    padding: 3px 15px;
+    border-color: rgb(241, 125, 43);
+    color: black;
+    font-weight: bold;
+    transition: ease-in 0.3s;
+    background-color: transparent;
+}
+.about-btn:hover
+{
+    background-color: rgb(241, 125, 43);
+}
+@media screen and (max-width:982px)
+{
+    #about p
+    {
+        font-size: 8px;
+    }
+}
+@media screen and (max-width:768px)
+{
+    #about p
+    {
+        font-size: 15px;
+    }
+    #about
+    {
+        height: 180vh;
+    }
+}
+@media screen and (min-width:1445px) 
+{
+    .home
+    {
+        height: 60vh;
+    }
+    .home-h1
+    {
+        font-size: 80px;
+        max-width: 80rem;
+    }
+    .home-p1
+    {
+        font-size: 30px;
+        max-width: 80rem;
+    }
+    .home-btn1
+    {
+        width: 250px;
+        height: 60px;
+        font-size: 32px;
+        padding-bottom: 25px;
+    }
+    #about
+    {
+        height: 100vh;
+        width: 100%;
+    }
+    #about .about-heading
+    {
+        font-size: 60px;
+    }
+    #about h3
+    {
+        font-size: 50px;
+        font-weight: bold;
+    }
+    #about p
+    {
+        font-size: 30px;
+    }
+    #about .about-btn
+    {
+        width: 300px;
+        height: 70px;
+        font-size: 30px;
+    }
+    #top-cards .heading2
+    {
+        font-size: 60px;
+    }
+    #menu .heading3
+    {
+        font-size: 60px;
+    }
+    #product .heading4
+    {
+        font-size: 60px;
+    }
+    #gallery .heading5
+    {
+        font-size: 60px;
+    }
+}
+#top-cards
+{
+    width: 100%;
+    /*height: 60vh;*/
+    background-color: beige;
+}
+.heading2
+{
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+.heading2 span
+{
+    color: rgb(241, 125, 43);
+}
+#top-cards .container
+{
+    margin-top: 30px;
+}
+#top-cards .card
+{
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#top-cards .card img
+{
+    border-radius: 10px;
+}
+#top-cards .card:hover
+{
+    transform: translateY(-10px);
+}
+#menu
+{
+    background-color: beige;
+    width: 100%;
+    margin-top: 60px;
+}
+.heading3
+{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(241, 125, 43);
+    border-bottom: solid;
+    border-color: rgb(241, 125, 43);
+    border-width: 2px;
+}
+#menu .c1
+{
+    margin-top: 50px;
+}
+#menu h3
+{
+    text-align: center;
+    color: rgb(241, 125, 43);
+    margin-top: 10px;
+}
+#menu span
+{
+    color: rgb(241, 125, 43);
+    float: right;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#menu p
+{
+    color: rgb(241, 125, 43);
+    font-weight: bold;
+    font-size: 20px;
+}
+#menu strike
+{
+    color: black;
+    font-size: 15px;
+}
+#menu i
+{
+    color: rgb(241, 125, 43);
+    font-size: 18px;
+}
+#product
+{
+    background-color: beige;
+    width: 100%;
+    margin-top: 60px;
+}
+.heading4
+{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(241, 125, 43);
+    border-bottom: solid;
+    border-color: rgb(241, 125, 43);
+    border-width: 2px;
+}
+#product .p1
+{
+    margin-top: 50px;
+}
+#product h3
+{
+    text-align: center;
+    color: rgb(241, 125, 43);
+    margin-top: 10px;
+}
+#product span
+{
+    color: rgb(241, 125, 43);
+    float: right;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#product p
+{
+    color: rgb(241, 125, 43);
+    font-weight: bold;
+    font-size: 20px;
+}
+#product strike
+{
+    color: black;
+    font-size: 15px;
+}
+#gallery
+{
+    width: 100%;
+    background-color: beige;
+}
+#gallery .container
+{
+    margin-top: 50px;
+}
+.heading5
+{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(241, 125, 43);
+    border-bottom: solid;
+    border-color: rgb(241, 125, 43);
+    border-width: 2px;
+}
+#gallery .card
+{
+    margin-top: 50px;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#gallery .card img
+{
+    border-radius: 10px;
+}
+#gallery .card:hover
+{
+    transform: translateY(-10px);
+}
+#contact
+{
+    background-color: beige;
+    width: 100%;
+    height: 100vh;
+    padding-top: 70px;
+}
+#contact .container
+{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(90deg,white 80%, rgb(241, 125, 43) 20%);
+    border-radius: 10px;
+}
+.heading6
+{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 70px;
+}
+#contact p
+{
+    font-weight: bold;
+    font-size: 13px;
+    color: black;
+}
+#contact input
+{
+    width: 360px;
+    border: none;
+    border-bottom: 1px solid rgb(241, 125, 43);
+}
+#contact-btn
+{
+    width: 200px;
+    height: 36px;
+    background-color: rgb(241, 125, 43);
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+    cursor: pointer;
+}
+#col
+{
+    width: 40%;
+    height: 60vh;
+    background: black;
+    margin-top: 78px;
+}
+#contact span
+{
+    color: rgb(241, 125, 43);
+}
+#contact h1
+{
+    color: white;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#contact #col p
+{
+    font-size: 15px;
+    color: white;
+    margin-top: 30px;
+    margin-left: 13px;
+}
+@media screen and (max-width:766px) 
+{
+    #contact .container    
+    {
+        background: white;
+    }
+    #col
+    {
+        width: 100%;
+        background: rgb(241, 125, 43);
+    }
+    #contact
+    {
+        height: 150vh;
+    }
+}
+@media screen and (max-width:400px) 
+{
+    #about p
+    {
+        font-size: small;
+    }
+    #about h3
+    {
+        font-size: 20px;
+    }
+    #about .about-btn
+    {
+        width: 130px;
+        height: 28px;
+        padding: auto;
+        font-size: small;
+    }
+    #contact input
+    {
+        width: 250px;
+    }
+    #contact #contact-btn
+    {
+        width: 130px;
+        height: 28px;
+        padding: auto;
+        font-size: small;
+    }
+    #blogs .blogs-btn
+    {
+        width: 130px;
+        height: 28px;
+        padding: auto;
+        font-size: small;
+    }
+}
+@media screen and (max-width:275px) 
+{
+    #contact
+    {
+        width: 100%;
+    }
+    #contact #col p
+    {
+        font-size: small;
+    }
+}
+#blogs
+{
+    width: 100%;   
+}
+#blogs .heading7
+{
+    margin-top: 120px;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+#blogs .heading7 span
+{
+    color: rgb(241, 125, 43);
+}
+#blogs .container
+{
+    margin-top: 60px;
+}
+#blogs h5
+{
+    color: rgb(241, 125, 43);
+}
+.blogs-btn
+{
+    width: 200px;
+    height: 36px;
+    background-color: rgb(241, 125, 43);
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+    cursor: pointer;   
+}
+#footer
+{
+    width: 100%;
+    background: rgb(241, 125, 43);
+    margin-top: 50px;
+} 
+.footer-logo img
+{
+    width: 180px;
+    border-radius: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+#footer .social-links i
+{
+    font-size: 17px;
+    margin-left: 10px;
+    margin-top: 30px;
+    padding: 10px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.credits
+{
+    color: white;
+    margin-top: 20px;
+    text-shadow: 0px 0px 1px black;
+}
+.credits a
+{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.credits a span
+{
+    color: black;
+}
+.copright span
+{
+    color: black;
+}
+.arrow
+{
+    position: fixed;
+    height: 50px;
+    bottom: 40px;
+    right: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 45px;
+}

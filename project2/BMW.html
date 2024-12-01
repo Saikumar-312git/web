@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header{
+            height:60vh;
+            background:linear-gradient(
+                45deg,
+                red,
+                blue,
+                white
+            ) ;
+            background-size: 400% 400%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: black;
+            position: relative;
+            animation: gradientBG 15s ease infinite;
+            overflow: hidden;
+        }
+        @keyframes gradientBG{
+            0%{
+                background-position: 0% 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0% 50%;
+            }
+        }
+        .header::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+        }
+        .header-content{
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+        }
+        .header h1{
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+        }
+        .header p{
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        .menu-nav{
+            background: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .menu-nav ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+        }
+        .menu-nav a{
+            text-decoration: none;
+            color: blue;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+        .menu-nav a:hover{
+            color: rgba(4, 9, 67, 0.1);
+        }
+        .About {
+            padding: 2rem 2rem;
+            background: wheat;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-weight: 400;
+        }
+        .menu-container{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .menu-section{
+            margin-top: 4rem;
+        }
+        .menu-section h1{
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        .menu-section h1::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #ff6b6b;
+        }
+        .menu-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 2rem;
+        }
+        .menu-item{
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease,box-shadow 0.3s ease;
+            position: relative;
+        }
+        .menu-item:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+        .menu-item-image{
+            height: 300px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .menu-item-image img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .menu-item-content{
+            padding: 1.5rem;
+        }
+        .menu-item-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 0.5rem;
+        }
+        .menu-item-title{
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: blue;
+        }
+        .menu-item-price{
+            columns: #ff6b6b;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+        .menu-item-description{
+            color: #636e72;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .dietary-info{
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color:#ff6b6b;
+        }
+        @media(max-width:768px){
+            .header h1{
+                font-size: 2.5rem;
+            }
+            .menu-nav ul{
+                flex-direction: column;
+                text-align: center;
+                gap:1rem;
+            }
+            .menu-grid{
+                grid-template-columns: 1fr;
+            }
+        }
+        .testimonials {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact {
+            padding: 5rem 2rem;
+            background: #0756a6;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 3rem auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #f1c40f;
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/600px-BMW.svg.png" height="70px">
+            <h1>BMW </h1>
+            <P>Experience the ultimate driving machine</P>
+        </div>
+    </header>
+    <nav class="menu-nav">
+        <ul>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Bikes">Bikes</a></li>
+            <li><a href="#Cars">Cars</a></li>
+            <li><a href="testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            
+        </ul>
+
+    </nav>
+
+    <div class="menu-container">
+        
+        <section id="About" class="About">
+            <div class="container">
+                <h2>About</h2>
+                <div class="About">
+                    <p>Welcome to BMW, where innovation, luxury, and performance define every journey. As a global leader in automotive excellence, we craft vehicles that combine cutting-edge technology, timeless design, and unmatched driving pleasure. Explore our diverse range of cars and motorcycles, each engineered to elevate your experience on every road. With a commitment to sustainability and innovation, BMW continues to shape the future of mobility. Discover the joy of driving with a brand that redefines excellence at every turn.</p>       
+                </div>
+            </div>
+        </section>
+        <section id="Bikes" class="menu-section">
+            <h1>Bikes</h1>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="s1000rr.jpg" alt="S1000RR" width="500">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">S1000RR</h3>
+                            <span class="menu-item-price">30,00,000</span>
+                        </div>
+                        <p class="menu-item-description">
+                            The BMW S1000RR is a high-performance superbike renowned for its aggressive design, advanced electronics, and a 999cc inline-four engine delivering exceptional speed and precision handling.</p>
+                        <p class="dietary-info">Racing Machine</p>
+                </div>  
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-image">
+                    <img src="gsa.jpg" alt="gsa adventure">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">GS 1250 Adventure</h3>
+                        <span class="menu-item-price">31,00,000</span>
+                    </div>
+                    <p class="menu-item-description">The BMW GS 1250 Adventure is a premium adventure touring motorcycle, featuring a 1254cc boxer engine, rugged build, and advanced tech for ultimate off-road and long-distance capabilities.</p>
+                    <p class="dietary-info">Adventure tourer</p>
+                </div>
+            </div>
+        </section>
+        <section id="Cars" class="menu-section">
+            <h1>Cars</h1>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="bmw-m4-green-.png" alt="bmw m4">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">BMW M4 Coupe</h3>
+                            <span class="menu-item-price">1,75,00,000</span>
+                        </div>
+                        <p class="menu-item-description">The BMW M4 Coupe is a high-performance sports car combining a sleek design with a powerful inline-six engine, delivering exhilarating driving dynamics and precision handling.</p>
+                        <p class="dietary-info">Sports Car</p>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="bmw ix.webp" alt="Bmw" width="500">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">BMW iX</h3>
+                            <span class="menu-item-price">1,50,00,000</span>
+                        </div>
+                        <p class="menu-item-description">The BMW iX is a luxury all-electric SUV offering cutting-edge technology, impressive range, and a bold, futuristic design for sustainable driving.</p>
+                        <p class="dietary-info">Luxury all-electric SUV</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <h3>Emily R.</h3>
+                        <p>"The BMW showroom experience was top-notch—friendly staff, stunning cars, and impeccable service!"</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <h3>James D.</h3>
+                        <p>"Absolutely loved the professionalism and attention to detail. Buying my BMW was seamless and exciting!"</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <h3>Sophia L.</h3>
+                        <p>"The showroom's ambiance and staff made me feel valued. A premium experience for a premium brand!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    
+    
+
+    </div>
+</body>
+</html>
