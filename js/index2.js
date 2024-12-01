@@ -246,6 +246,111 @@ let products = {
   }
   
   console.log(findMaxPrice(products));  
+
+  function factorial(a){
+    if (a<0){
+      return "factorial is not found!"
+    }
+    let result =1;
+    for(let i=1;i<=a;i++){
+      result = result*i;
+    }
+    return result;
+  }
+  
+  console.log(factorial(5));
+  
+  //2)
+  
+  function isPrime(a){
+    if (a<=1){
+      return "not a prime number..!"
+    }
+    for(let i=2;i<=Math.sqrt(a);i++){
+      if(a%i==0){
+        return "not a prime"
+      }
+    }
+    return "prime"
+  }
+  console.log(isPrime(5));
+  
+  //3)
+  
+  for(let i=1;i<=50;i++){
+    if(i%2==0){
+      console.log(i);
+    }
+  }
+  
+  //4)
+  
+  function calculate(a){
+    sum = 0;
+    for(let i=0;i<a.length;i++){
+      sum = sum+a[i];
+    }
+    return sum;
+  }
+  const array = [1,2,3,4,5];
+  console.log(calculate(array));
+  
+  //5)
+  
+  function Reverse(a){
+    let reverse = "";
+    for(let i = a.length-1;i>=0;i--){
+      reverse = reverse + a[i];
+    }
+    return reverse;
+  }
+  
+  console.log(Reverse("Hello"));
+  
+  
+  
+  //7)
+  
+  for(let i=0;i<=5;i++){
+    let s="";
+    for(let j=1;j<=i;j++){
+      s=s+"*";
+    }
+    console.log(s);
+  }
+  
+  
+  //8)
+  function largestnumber(a){
+    if(a.length==0){
+      return null;
+    }
+    let largest=a[0];
+    for(let i=1;i<a.length;i++){
+      if(a[i]>largest){
+        largest = a[i];
+      }
+    }
+    return largest;
+  }
+  
+  const array1 = [1,2,3,4,5,6]
+  console.log(largestnumber(array1));
+  
+  //9)
+  
+  function vowels(a){
+    count = 0;
+    const vowel = "aeiouAEIOU";
+    for(let i=0;i<a.length;i++){
+      if(vowel==a[i]){
+        count++;
+      }
+    }
+    return count;
+  }
+  
+  console.log(vowels("Hello"));
   
   
   
